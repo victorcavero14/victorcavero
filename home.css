@@ -1,0 +1,33 @@
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0 0 0 0;
+}
+.nav-bar{
+    position: -webkit-sticky;
+    position: sticky; 
+    height: 50px;
+    background-color: black;
+    border-radius: 5%;
+    top: 0;
+}
+.nav-bar ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin: 0 0 0 0;
+}
+.nav-bar li{
+    display: inline;
+    margin-right: 25px;
+}
+.nav-bar li a{
+    text-decoration: none;
+    color: white;
+}.nav-bar li a:hover{
+    text-decoration: none;
+    color: red;
+}
