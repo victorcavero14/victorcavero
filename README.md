@@ -2,8 +2,8 @@
 
 ## Tecnologias utilizadas:
 
--
--
+- HTML 5
+- CSS
 -
 -
 -
