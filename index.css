@@ -89,8 +89,22 @@ html{
 }
 
 .experience h2 {
-    
+
 }
 .experience p {
     width: clamp(100px, 75%, 600px);
 }
+.everis {
+    width: clamp(100px, 75%, 600px);
+    border-radius: 5%;
+    -webkit-filter: drop-shadow(1px 1px 0 white)
+                drop-shadow(-1px 1px 0 white)
+                drop-shadow(1px -1px 0 white)
+                drop-shadow(-1px -1px 0 white);
+
+    filter: drop-shadow(1px 1px 0 white)
+        drop-shadow(-1px 1px 0 white)
+        drop-shadow(1px -1px 0 white)
+        drop-shadow(-1px -1px 0 white);
+    z-index: -1;
+ }
