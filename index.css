@@ -1,110 +1,152 @@
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 
-html{
-    font-family: Arial, Helvetica, sans-serif;
-    min-height: 100%;
-    min-width: 300px;
-    background-color: #28282a;
-    color: white;
+:root {
+  --h-header: 50px;
+  --bg-color: #28282a;
+  --red-color: #d20409;
 }
-.home{
-    max-width: 700px;
-    margin: auto;
+html {
+  width: 100%;
+  min-width: 300px;
 }
-.nav-bar{
-    position: -webkit-sticky;
-    position: sticky; 
-    border-radius: 5%;
-    top: 0;
-    height: 50px;
-    background-color: #28282a;
+
+body {
+  margin: 0px;
+  background-color: var(--bg-color);
+  color: white;
 }
-.nav-bar ul{
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
+
+a {
+  text-decoration: none;
+  color: white;
 }
-.nav-bar li{
-    display: inline;
-    margin-right: 5%;
+a:hover {
+  text-decoration: none;
+  color: var(--red-color);
 }
-.nav-bar li a{
-    text-decoration: none;
-    color: white;
-}.nav-bar li a:hover{
-    text-decoration: none;
-    color: rgb(225, 0, 0);
+
+.button {
+  appearance: button;
+  margin: 10px;
+  padding: 10px;
+  border: 3px solid white;
+  border-radius: 10%;
+  background-color: white;
+}
+
+.home {
+  width: clamp(100px, 75%, 600px);
+  margin: auto;
+}
+.nav-bar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 50px;
+  background-color: var(--bg-color);
+  z-index: 1;
+}
+.nav-bar ul {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+.nav-bar li {
+  display: inline;
+  margin: 4%;
+}
+.nav-bar li a {
+  text-decoration: none;
+  color: white;
+}
+.nav-bar li a:hover {
+  text-decoration: none;
+  color: var(--red-color);
+}
+.grid-cv {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  place-items: center;
+}
+#cv-photo {
+  width: clamp(100px, 80%, 600px);
+  max-width: 100%;
+}
+
+.main-text {
+  display: grid;
+  grid-template-rows: 50% 30% 20%;
+  place-items: center;
+  height: 100%;
+}
+
+.animation-write {
+  width: 100%;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid var(--red-color); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3s steps(26, end), blink-caret 0.75s step-end infinite;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+  background-color: red;
+  border-color: var(--red-color);
+}
+
+.btn-outline-primary {
+  background-color: white;
+  border-color: var(--red-color);
+  border-radius: 15%;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--red-color);
+  }
 }
 .grid {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    place-items: center;
-}
-.cv-photo {
-    width: clamp(100px, 75%, 600px);
-    border-radius: 5%;
-    -webkit-filter: drop-shadow(2px 2px 0 white)
-                drop-shadow(-2px 2px 0 white)
-                drop-shadow(2px -2px 0 white)
-                drop-shadow(-2px -2px 0 white);
-
-    filter: drop-shadow(2px 2px 0 white)
-        drop-shadow(-2px 2px 0 white)
-        drop-shadow(2px -2px 0 white)
-        drop-shadow(-2px -2px 0 white);
-    z-index: -1;
- }
-.text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    font-size: 120%;
-}
-.animation-write{
-    border-right: 2px solid rgba(255,255,255,.75);
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    font-family: "Anonymous Pro";
-    color: rgba(255,255,255,.75);
-    animation: typewriter 4s steps(44) 1s 1 normal both,
-    blinkTextCursor 500ms steps(44) infinite normal;
-}
-@keyframes typewriter{
-    from{width: 0;}
-    to{width: 24em;}
-}
-@keyframes blinkTextCursor{
-    from{border-right-color: rgba(255,255,255,.75);}
-    to{border-right-color: transparent;}
-}
-.experience {
-    display: grid;
-    grid-template-columns: 100%;
-    place-items: center; 
+  display: grid;
+  grid-template-columns: 100%;
+  place-items: center;
 }
 
-.experience h2 {
-
+.scroll-margin {
+  scroll-margin-top: calc(var(--h-header));
 }
 .experience p {
-    width: clamp(100px, 75%, 600px);
+  width: clamp(100px, 75%, 600px);
+}
+.img-border {
+  border-radius: 5%;
+  filter: drop-shadow(2px 2px 0 white) drop-shadow(-2px 2px 0 white)
+    drop-shadow(2px -2px 0 white) drop-shadow(-2px -2px 0 white);
+  max-width: 50%;
+  padding: 20px 0px 20px 0px;
 }
 .everis {
-    width: clamp(100px, 75%, 600px);
-    border-radius: 5%;
-    -webkit-filter: drop-shadow(1px 1px 0 white)
-                drop-shadow(-1px 1px 0 white)
-                drop-shadow(1px -1px 0 white)
-                drop-shadow(-1px -1px 0 white);
-
-    filter: drop-shadow(1px 1px 0 white)
-        drop-shadow(-1px 1px 0 white)
-        drop-shadow(1px -1px 0 white)
-        drop-shadow(-1px -1px 0 white);
-    z-index: -1;
- }
+  border-radius: 5%;
+  filter: drop-shadow(1px 1px 0 white) drop-shadow(-1px 1px 0 white)
+    drop-shadow(1px -1px 0 white) drop-shadow(-1px -1px 0 white);
+}

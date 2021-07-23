@@ -3,9 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="index.css">
     <link rel='shortcut icon' type='image/x-icon' href='img/favicon.png' />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
     <title> Victor Cavero </title>
 </head>
 <body>
@@ -24,44 +27,76 @@
             </li>
         </ul>
     </section>
-    <section class="home">
-        <div class="grid">
-            <img src="img/photo1.png" alt="resume personal photo" class="cv-photo">
-            <div class="text">
-                <p class="animation-write"> 
+    <section id="home" class="home scroll-margin">
+        <div class="grid-cv">
+            <img src="img/photo1.png" alt="resume personal photo" id="cv-photo" class="img-border">
+            <div class="main-text">
+                <!--
+                <h1 class="animation-write"> 
                     Víctor Cavero
                     <br> <br>
-                    Computer Science Engineer
+                Computer Science Engineer
                 </h1>
+                -->
+                <h1 style="padding-top: 50%;"> Víctor Cavero </h1> 
+                <p style="padding-bottom: 10%;" class="animation-write"> Computer Science Engineer </p>
+                <p> 
+                    <a class="btn btn-outline-primary"href="https://github.com/victorcavero14" > <img src="https://img.icons8.com/ios/50/000000/github--v1.png" style="width: 2rem;"/> </a>
+                    <a class="btn btn-outline-primary" href="https://www.linkedin.com/in/vcavero/" ><img src="https://img.icons8.com/ios/50/000000/linkedin-2--v1.png" style="width: 2rem;"/> </a>
+                </p>
             </div>
         </div>
     </section>
     <br> 
-    <section class="experience">
-        <h2> Backend Developer</h2>
-        <p> Support and training in:
-            <br> - Refinement of User Stories, both functionally and in the definition of acceptance criteria (functional tests).
-            <br> - Development of functionalities. 
-            <br> - The technology we have is React in the Front layer and Spring Boot in Back on Microservices Architecture.
-            <br> - JUnits development and automation.
-            <br> - Execution of unit tests.
+    <section id="experience" class="experience scroll-margin">
+        <div class="grid">
+            <h2> Backend Developer</h2>
+            <p> Support and training in:
+                <br> - Refinement of User Stories, both functionally and in the definition of acceptance criteria (functional tests).
+                <br> - Development of functionalities. 
+                <br> - The technology we have is React in the Front layer and Spring Boot in Back on Microservices Architecture.
+                <br> - JUnits development and automation.
+                <br> - Execution of unit tests.
+            </p>
+            <p class="grid">
+                <img src="img/everis.png" alt="an image of logo everis" class="everis img-border" >
+            </p>
 
-            <img src="img/everis.png" alt="an image of logo everis" class="everis" >
-
-        </p>
-        <h2> Computer Science Engineer </h2>
-        <p>  Informatics Engineering, computing itinerary. 
-            <br> In Madrid, Spain. </p>
-        <h2> Erasmus </h2>
-        <p> Academic Master study programme "Computer Systems".
-            <br> Faculty of Computer Scidence and Information Technology in Riga, Latvia.
-            <br> One semester of Erasmus exchange.
-        </p>
+            <h2> Informatics Engineering </h2>
+            <p>  Informatics Engineering, computing itinerary. 
+                <br> In Madrid, Spain. 
+            </p>
+            <p class="grid">
+                <img src="img/ucm.png" alt="logo of the UCM" class="img-border" >
+            </p>
+            <h2> Erasmus </h2>
+            <p> Academic Master study programme "Computer Systems".
+                <br> Faculty of Computer Scidence and Information Technology in Riga, Latvia.
+                <br> One semester of Erasmus exchange.
+            </p>
+            <p class="grid">
+                <img src="img/rtu.png" alt="logo of the RTU" class="img-border" >
+            </p>
+        </div>
     </section>
+    <section id="projects" class="projects scroll-margin">
+        <div class="card" style="width: 18rem; background-color: #28283F; border-radius: 10%;">
+            <img src="img/everis.png" alt="an image of logo everis" class="everis img-border" >
+            <div class="card-body">
+                <h2 class="card-title"> Backend Developer</h2>
+                <p class="card-text"> Support and training in:
+                    <br> - Refinement of User Stories, both functionally and in the definition of acceptance criteria (functional tests).
+                    <br> - Development of functionalities. 
+                    <br> - The technology we have is React in the Front layer and Spring Boot in Back on Microservices Architecture.
+                    <br> - JUnits development and automation.
+                    <br> - Execution of unit tests.
+                </p>
+            </div>
+        </div>
     </section>
-    <section class="projects">
-    </section>
-    <form class="contact"> 
+    <form id="contact" class="contact scroll-margin"> 
     </form>
+
+    <script src="index.js"></script>
 </body>
 </html>
