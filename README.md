@@ -4,7 +4,9 @@ Porfolio creado con el fin de ser utilizado como curriculum y aprender sobre las
 
 ## Tecnologias utilizadas
 
+- Package manager: NPM
 - HTML 5
 - CSS
-- Bootstrap
 - JavaScript
+- CSS Framework: Bootstrap
+- Code Styler: Prettier
