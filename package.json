@@ -1,0 +1,22 @@
+{
+  "name": "victorcavero",
+  "version": "1.0.0",
+  "description": "Porfolio creado con el fin de ser utilizado como curriculum y aprender sobre las tecnologías que se utilizan en el front-end.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victorcavero14/victorcavero.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victorcavero14/victorcavero/issues"
+  },
+  "homepage": "https://github.com/victorcavero14/victorcavero#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.0"
+  }
+}
