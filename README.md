@@ -11,8 +11,14 @@ Porfolio creado con el fin de ser utilizado como curriculum y aprender sobre las
 - CSS Framework: Bootstrap
 - Code Styler: Prettier
 
-# Use prettier:
+## Usos
 
 '''
 npx prettier --write .
+
+npx serve
 '''
+## Mejoras
+
+- Reducir el tamaño de la imagen CV tarda mucho en cargar
+- No importa correctamente los archivos de las Redes sociales

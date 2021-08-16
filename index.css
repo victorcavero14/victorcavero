@@ -7,7 +7,6 @@
 *::after {
   box-sizing: inherit;
 }
-
 :root {
   --h-header: 60px;
   --bg-color: #28282a;
@@ -20,12 +19,12 @@
 }
 html {
   scroll-behavior: smooth;
+  font-family: system-ui;
 }
 body {
   margin: 0px;
   color: white;
   background-color: var(--bg-color);
-  font-family: system-ui;
 }
 .scroll-margin {
   scroll-margin-top: calc(var(--h-header) - 1px);
