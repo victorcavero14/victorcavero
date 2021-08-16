@@ -1,5 +1,13 @@
 @import url(node_modules/bootstrap/dist/css/bootstrap.css);
 
+* {
+  box-sizing: border-box;
+}
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 :root {
   --h-header: 60px;
   --bg-color: #28282a;
@@ -17,6 +25,7 @@ body {
   margin: 0px;
   color: white;
   background-color: var(--bg-color);
+  font-family: system-ui;
 }
 .scroll-margin {
   scroll-margin-top: calc(var(--h-header) - 1px);
@@ -31,8 +40,9 @@ body {
 .btn-outline-primary:hover,
 .btn-outline-primary:focus,
 .btn-outline-primary:active {
-  background-color: #eac435;
+  background-color: white;
   border-color: white;
+  box-shadow: 0 0 0 0.25rem var(--bg-color);
 }
 .btn-outline-primary {
   background-color: white;
@@ -59,19 +69,30 @@ body {
   text-decoration: none;
   color: var(--red-color);
 }
+#gradient {
+  background-image: linear-gradient(
+    var(--bg-color),
+    var(--blueviolet-color) 95%,
+    var(--bg-color)
+  );
+}
 #welcome-section {
   display: grid;
   place-items: center;
   grid-template-rows: 80% 20%;
   height: calc(100vh - var(--h-header));
   margin-top: var(--h-header);
-  background-image: linear-gradient(var(--bg-color), var(--blueviolet-color));
 }
-#welcome-text {
-  margin-top: 5%;
+#social-media {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: var(--h-header);
 }
 #arrow {
   animation: blink 2s infinite;
+  margin-bottom: 2rem;
 }
 @keyframes blink {
   from {
@@ -84,24 +105,16 @@ body {
     opacity: 1;
   }
 }
-#home {
-  width: clamp(100px, 75%, 600px);
-  margin: auto;
-}
-.grid-cv {
+#grid-cv {
   display: grid;
-  grid-template-columns: 50% 50%;
   place-items: center;
 }
 #cv-photo {
-  width: clamp(100px, 80%, 600px);
-  max-width: 100%;
-}
-.main-text {
-  display: grid;
-  grid-template-rows: 80% 20%;
-  place-items: center;
-  height: 100%;
+  width: 300px;
+  margin-bottom: 0.5rem;
+  border-radius: 10%;
+  filter: drop-shadow(1px 1px 0 white) drop-shadow(-1px 1px 0 white)
+    drop-shadow(1px -1px 0 white) drop-shadow(-1px -1px 0 white);
 }
 .animation-write {
   width: 100%;
@@ -129,6 +142,12 @@ body {
     border-color: var(--red-color);
   }
 }
+#experience h2 {
+  margin: 20px;
+}
+#experience h3 {
+  margin: 20px;
+}
 #experience p {
   width: clamp(100px, 75%, 600px);
 }
@@ -147,8 +166,97 @@ body {
   max-width: 50%;
   padding: 20px 0px 20px 0px;
 }
-.everis {
+#everis-img {
+  width: 200px;
   border-radius: 5%;
   filter: drop-shadow(1px 1px 0 white) drop-shadow(-1px 1px 0 white)
     drop-shadow(1px -1px 0 white) drop-shadow(-1px -1px 0 white);
+}
+
+#ucm-img {
+  width: 200px;
+}
+
+#rtu-img {
+  width: 200px;
+}
+
+#projects > h2 {
+  display: grid;
+  place-items: center;
+}
+
+#carrousell {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 150px 0px 150px;
+}
+
+#contact {
+  display: grid;
+  place-items: center;
+  background-color: var(--bg-color);
+  height: 100%;
+  margin: 150px;
+}
+
+form {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 60px;
+  margin: 12px auto;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+form > div {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  padding: 0 20px;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  text-align: center;
+}
+
+form > div > img {
+  filter: invert(1);
+  width: 100px;
+}
+
+form > input,
+form > textarea {
+  padding: 12px;
+  margin: 12px auto;
+  border: 1px solid #ccc;
+  color: #ddd;
+  background-color: #222;
+  border-radius: 4px;
+  display: block;
+  width: 70vw;
+}
+
+form > textarea {
+  height: 100px;
+  resize: none;
+}
+
+form > input[type="submit"] {
+  max-width: 20vw;
+  padding-left: 1%;
+  padding-right: 1%;
+  cursor: pointer;
+  transition: 0.35s;
+}
+
+form > input[type="submit"]:hover {
+  background-color: #555;
+}
+
+#footer {
+  margin-left: 5rem;
 }

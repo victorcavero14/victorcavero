@@ -18,5 +18,8 @@
   "homepage": "https://github.com/victorcavero14/victorcavero#readme",
   "dependencies": {
     "bootstrap": "^5.1.0"
+  },
+  "devDependencies": {
+    "prettier": "2.3.2"
   }
 }

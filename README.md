@@ -10,3 +10,9 @@ Porfolio creado con el fin de ser utilizado como curriculum y aprender sobre las
 - JavaScript
 - CSS Framework: Bootstrap
 - Code Styler: Prettier
+
+# Use prettier:
+
+'''
+npx prettier --write .
+'''
