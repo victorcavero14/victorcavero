@@ -11,11 +11,18 @@
   --h-header: 60px;
   --bg-color: #28282a;
   --red-color: #d20409;
+  --white: #fff;
+  --black: #000;
+  --grey: #ddd;
+  --dark-grey: #ccc;
+  --darkest-grey: #555;
+  --dark: #222;
+  --blueviolet-color: #8a2be2;
+
   --safron-color: #eac435;
   --caribean-color: #03cea4;
   --orange-color: #fb4d3d;
   --carmine-color: #ca1551;
-  --blueviolet-color: #8a2be2;
 }
 html {
   scroll-behavior: smooth;
@@ -23,29 +30,32 @@ html {
 }
 body {
   margin: 0px;
-  color: white;
+  color: var(--white);
   background-color: var(--bg-color);
 }
 .scroll-margin {
   scroll-margin-top: calc(var(--h-header) - 1px);
 }
+.scroll-margin-contact {
+  scroll-margin-top: calc(var(--h-header) + 50px - 1px);
+}
 .button {
   margin: 10px;
   padding: 10px;
-  border: 3px solid white;
+  border: 3px solid var(--white);
   border-radius: 10%;
-  background-color: white;
+  background-color: var(--white);
 }
 .btn-outline-primary:hover,
 .btn-outline-primary:focus,
 .btn-outline-primary:active {
-  background-color: white;
-  border-color: white;
+  background-color: var(--white);
+  border-color: var(--white);
   box-shadow: 0 0 0 0.25rem var(--bg-color);
 }
 .btn-outline-primary {
-  background-color: white;
-  border-color: white;
+  background-color: var(--white);
+  border-color: var(--white);
   border-radius: 25%;
 }
 #navbar {
@@ -62,7 +72,7 @@ body {
 }
 #navbar a {
   text-decoration: none;
-  color: white;
+  color: var(--white);
 }
 #navbar a:hover {
   text-decoration: none;
@@ -112,8 +122,9 @@ body {
   width: 300px;
   margin-bottom: 0.5rem;
   border-radius: 10%;
-  filter: drop-shadow(1px 1px 0 white) drop-shadow(-1px 1px 0 white)
-    drop-shadow(1px -1px 0 white) drop-shadow(-1px -1px 0 white);
+  filter: drop-shadow(1px 1px 0 var(--white))
+    drop-shadow(-1px 1px 0 var(--white)) drop-shadow(1px -1px 0 var(--white))
+    drop-shadow(-1px -1px 0 var(--white));
 }
 .animation-write {
   width: 100%;
@@ -141,6 +152,10 @@ body {
     border-color: var(--red-color);
   }
 }
+#first-hr {
+  position: relative;
+  bottom: 20px;
+}
 #experience h2 {
   margin: 20px;
 }
@@ -160,16 +175,18 @@ body {
 }
 .img-border {
   border-radius: 5%;
-  filter: drop-shadow(2px 2px 0 white) drop-shadow(-2px 2px 0 white)
-    drop-shadow(2px -2px 0 white) drop-shadow(-2px -2px 0 white);
+  filter: drop-shadow(2px 2px 0 var(--white))
+    drop-shadow(-2px 2px 0 var(--white)) drop-shadow(2px -2px 0 var(--white))
+    drop-shadow(-2px -2px 0 var(--white));
   max-width: 50%;
   padding: 20px 0px 20px 0px;
 }
 #everis-img {
   width: 200px;
   border-radius: 5%;
-  filter: drop-shadow(1px 1px 0 white) drop-shadow(-1px 1px 0 white)
-    drop-shadow(1px -1px 0 white) drop-shadow(-1px -1px 0 white);
+  filter: drop-shadow(1px 1px 0 var(--white))
+    drop-shadow(-1px 1px 0 var(--white)) drop-shadow(1px -1px 0 var(--white))
+    drop-shadow(-1px -1px 0 var(--white));
 }
 
 #ucm-img {
@@ -180,9 +197,36 @@ body {
   width: 200px;
 }
 
+#projects {
+  margin-bottom: 50px;
+}
+
 #projects > h2 {
   display: grid;
   place-items: center;
+  margin-top: 28px;
+}
+
+.card-img-top {
+  padding: 20px;
+}
+
+.card-title {
+  color: var(--black);
+}
+
+.card-text {
+  color: var(--black);
+}
+
+.btn-primary {
+  color: var(--white);
+  background-color: var(--blueviolet-color);
+  border-color: var(--blueviolet-color);
+}
+
+.card {
+  width: 18rem;
 }
 
 #carrousell {
@@ -195,8 +239,7 @@ body {
   display: grid;
   place-items: center;
   background-color: var(--bg-color);
-  height: 100%;
-  margin: 150px;
+  margin: 150px 150px 50px 150px;
 }
 
 form {
@@ -204,10 +247,9 @@ form {
   padding-right: 25px;
   padding-top: 60px;
   margin: 12px auto;
-  border: 2px solid #ccc;
+  border: 2px solid var(--dark-grey);
   border-radius: 20px;
   position: relative;
-  z-index: 1;
 }
 
 form > div {
@@ -216,8 +258,8 @@ form > div {
   left: 50%;
   padding: 0 20px;
   transform: translate(-50%, -50%);
-  background-color: black;
-  border: 2px solid #ccc;
+  background-color: var(--black);
+  border: 2px solid var(--dark-grey);
   border-radius: 20px;
   text-align: center;
 }
@@ -231,9 +273,9 @@ form > input,
 form > textarea {
   padding: 12px;
   margin: 12px auto;
-  border: 1px solid #ccc;
-  color: #ddd;
-  background-color: #222;
+  border: 1px solid var(--dark-grey);
+  color: var(--grey);
+  background-color: var(--dark);
   border-radius: 4px;
   display: block;
   width: 70vw;
@@ -253,9 +295,49 @@ form > input[type="submit"] {
 }
 
 form > input[type="submit"]:hover {
-  background-color: #555;
+  background-color: var(--darkest-grey);
 }
 
 #footer {
-  margin-left: 5rem;
+  display: grid;
+  grid-template-columns: 100%;
+  place-items: center;
+}
+
+@media (max-width: 1200px) {
+  #carrousell {
+    display: grid;
+    grid-gap: 5vh;
+  }
+  form > input,
+  form > textarea {
+    width: 50vw;
+  }
+}
+@media (max-width: 700px) {
+  #contact {
+    margin: 100px 0px 0px 0px;
+  }
+  form {
+    border: 0px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #carrousell {
+    display: flex;
+    margin: 50px 150px 0px 150px;
+  }
+  form > input,
+  form > textarea {
+    width: 70vw;
+  }
+}
+@media (min-width: 700px) {
+  #contact {
+    margin: 150px 150px 50px 150px;
+  }
+  form {
+    border: 2px solid var(--dark-grey);
+  }
 }
