@@ -20,3 +20,5 @@ npx serve
 '''
 
 ## Mejoras
+
+Hay que importar bootstrap usando webpack desde node_modules

@@ -8,22 +8,28 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="styles/index.css" />
     <script defer src="js/index.js" type="module"></script>
     <title>Victor Cavero portfolio</title>
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#navbar" data-offset="60">
     <header>
-      <nav id="navbar">
-        <a href="#welcome-section">Home</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+      <nav id="navbar" class="nav">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
       </nav>
     </header>
     <main>
       <div id="gradient">
-        <section id="welcome-section" class="scroll-margin">
+        <section id="home" class="scroll-margin">
           <div id="welcome-text">
             <div id="grid-cv">
               <img
@@ -208,10 +214,9 @@
             alt="icon"
           />
         </div>
-        <input type="text" placeholder="Name (required)" required />
-        <input type="email" placeholder="Address (required)" required />
-        <input type="text" placeholder="Topic (required)" required />
-        <textarea placeholder="Subject (required)" required></textarea>
+        <input type="text" placeholder="Name*" required />
+        <input type="email" placeholder="Address*" required />
+        <textarea placeholder="Content*" required></textarea>
         <input type="submit" value="Send" />
       </form>
     </main>
@@ -219,5 +224,22 @@
     <footer id="footer">
       <p>Done by Víctor Cavero using HTML5, CSS and JS.</p>
     </footer>
+    <input id="theme" type="button" value="Change mode" />
+    <!-- Optional theme -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
