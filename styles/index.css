@@ -1,4 +1,4 @@
-@import url(node_modules/bootstrap/dist/css/bootstrap.css);
+@import url(../node_modules/bootstrap/dist/css/bootstrap.css);
 
 * {
   box-sizing: border-box;
@@ -18,7 +18,7 @@
   --darkest-grey: #555;
   --dark: #222;
   --blueviolet-color: #8a2be2;
-
+  /*not used colors */
   --safron-color: #eac435;
   --caribean-color: #03cea4;
   --orange-color: #fb4d3d;
@@ -158,6 +158,9 @@ body {
 }
 #experience h2 {
   margin: 20px;
+  border: 1px solid var(--white);
+  border-radius: 20px;
+  padding: 10px;
 }
 #experience h3 {
   margin: 20px;
