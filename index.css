@@ -224,6 +224,12 @@ body {
   background-color: var(--blueviolet-color);
   border-color: var(--blueviolet-color);
 }
+.btn:hover,
+.btn:focus,
+.btn:active {
+  background-color: var(--blueviolet-color);
+  filter: brightness(1.2);
+}
 
 .card {
   width: 18rem;
