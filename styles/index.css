@@ -67,6 +67,8 @@ body {
   height: var(--h-header);
   background-color: var(--bg-color);
   z-index: 1;
+  flex-wrap: nowrap;
+  font-size: small;
 }
 
 #navbar a:hover {
