@@ -22,7 +22,7 @@ const light = {
   "--grey-color": "#ddd",
   "--dark-grey-color": "#ccc",
   "--darkest-grey-color": "#555",
-  "--dark-color": "#222",
+  "--dark-color": "#f3f3f3",
   "--blueviolet-color": "#8a2be2",
 };
 
@@ -42,4 +42,42 @@ const change_props = (obj) => {
   root.style.setProperty("--bg-color", obj["--bg-color"]);
   root.style.setProperty("--white-color", obj["--white-color"]);
   root.style.setProperty("--black-color", obj["--black-color"]);
+  root.style.setProperty("--dark-color", obj["--dark-color"]);
+};
+
+const submit = document.querySelector("form");
+
+submit.addEventListener("submit", () => {
+  var name_val = document.querySelector('input[type="text"]').value;
+  var email_val = document.querySelector('input[type="email"]').value;
+  var content_val = document.querySelector("textarea").value;
+
+  const data = {
+    name: name_val,
+    email: email_val,
+    content: content_val,
+  };
+
+  post_request(data);
+});
+
+const post_request = (data) => {
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "https://httpbin.org/anything", true); // aqui añadir la url del flask de python
+  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.send(data);
+};
+
+/* REUTILIZAR FUNCION PARA DESCARGAR PDF CON MI CV? */
+const export2txt = (originalData) => {
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(
+    new Blob([JSON.stringify(originalData, null, 2)], {
+      type: "text/plain",
+    })
+  );
+  a.setAttribute("download", "form.txt");
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
 };
