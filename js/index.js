@@ -23,16 +23,28 @@ const light = {
   "--dark-grey-color": "#ccc",
   "--darkest-grey-color": "#555",
   "--dark-color": "#f3f3f3",
-  "--blueviolet-color": "#8a2be2",
+  "--blueviolet-color": "#eac435",
 };
 
 button.addEventListener("click", () => {
+  var formimg = document.querySelector("#form-img");
+  var arrow = document.querySelector("#arrow");
+  var logos = document.querySelectorAll(".logo");
+
   if (value) {
     change_props(light);
+    logos.forEach((logo) => logo.classList.add("invert"));
+
+    arrow.classList.add("invert");
+    formimg.style.setProperty("filter", "invert(0)");
 
     value = false;
   } else {
     change_props(dark);
+    logos.forEach((logo) => logo.classList.remove("invert"));
+
+    formimg.style.setProperty("filter", "invert(1)");
+    arrow.classList.remove("invert");
 
     value = true;
   }
@@ -43,6 +55,7 @@ const change_props = (obj) => {
   root.style.setProperty("--white-color", obj["--white-color"]);
   root.style.setProperty("--black-color", obj["--black-color"]);
   root.style.setProperty("--dark-color", obj["--dark-color"]);
+  root.style.setProperty("--blueviolet-color", obj["--blueviolet-color"]);
 };
 
 const submit = document.querySelector("form");
