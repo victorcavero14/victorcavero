@@ -31,6 +31,13 @@ document.documentElement.style.setProperty(
   `${window.innerHeight / 100}px`
 );
 
+window.addEventListener("resize", () => {
+  document.documentElement.style.setProperty(
+    "--vh",
+    `${window.innerHeight / 100}px`
+  );
+});
+
 button.addEventListener("click", () => {
   var formimg = document.querySelector("#form-img");
   var arrow = document.querySelector("#arrow");
