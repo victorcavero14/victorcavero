@@ -86,7 +86,7 @@ body {
 }
 
 #gradient {
-  height: calc(var(--vh, 1vh) * 100 - var(--h-header));
+  /* height: calc(var(--vh, 1vh) * 100 - var(--h-header)); */
   background-image: linear-gradient(
     var(--bg-color),
     var(--blueviolet-color) 80%,
@@ -94,10 +94,12 @@ body {
   );
 }
 #home {
+  position: relative;
   display: grid;
   place-items: center;
   grid-template-rows: 80% 20%;
   height: calc(100vh - var(--h-header));
+  height: calc(var(--vh, 1vh) * 100 - var(--h-header));
   margin-top: var(--h-header);
   align-items: start;
 }
@@ -368,6 +370,11 @@ form > input[type="submit"]:hover {
   form > input,
   form > textarea {
     width: 50vw;
+  }
+}
+@media (max-height: 720px) {
+  #arrow {
+    display: none;
   }
 }
 @media (max-width: 700px) {
