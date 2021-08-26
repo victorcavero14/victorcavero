@@ -26,6 +26,11 @@ const light = {
   "--blueviolet-color": "#eac435",
 };
 
+document.documentElement.style.setProperty(
+  "--vh",
+  `${window.innerHeight / 100}px`
+);
+
 button.addEventListener("click", () => {
   var formimg = document.querySelector("#form-img");
   var arrow = document.querySelector("#arrow");
@@ -70,15 +75,17 @@ submit.addEventListener("submit", () => {
     email: email_val,
     content: content_val,
   };
-
   post_request(data);
 });
 
 const post_request = (data) => {
   var xhr = new XMLHttpRequest();
-  xhr.open("POST", "https://httpbin.org/anything", true); // aqui añadir la url del flask de python
+
+  var json = JSON.stringify(data);
+  xhr.open("POST", "http://localhost:3000/submit-data", true); // aqui añadir la url express
   xhr.setRequestHeader("Content-Type", "application/json");
-  xhr.send(data);
+  xhr.send(json);
+  console.log("Form sent");
 };
 
 /* REUTILIZAR FUNCION PARA DESCARGAR PDF CON MI CV? */

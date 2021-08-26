@@ -16,7 +16,9 @@ Porfolio creado con el fin de ser utilizado como curriculum y aprender sobre las
 '''
 npx prettier --write .
 
-npx serve
+http-server
+
+node api.js
 '''
 
 ## Mejoras

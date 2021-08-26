@@ -84,11 +84,12 @@ body {
 .active {
   color: var(--red-color);
 }
+
 #gradient {
-  height: calc(100% - var(--h-header));
+  height: calc(var(--vh, 1vh) * 100 - var(--h-header));
   background-image: linear-gradient(
     var(--bg-color),
-    var(--blueviolet-color) 95%,
+    var(--blueviolet-color) 80%,
     var(--bg-color)
   );
 }
@@ -98,9 +99,10 @@ body {
   grid-template-rows: 80% 20%;
   height: calc(100vh - var(--h-header));
   margin-top: var(--h-header);
+  align-items: start;
 }
 #welcome-text {
-  margin: 3em;
+  margin: 0em 3em 0em 3em;
   z-index: 1;
 }
 #social-media {
@@ -115,7 +117,6 @@ body {
 }
 #arrow {
   animation: blink 2s infinite;
-  margin-top: 4em;
 }
 @keyframes blink {
   from {
